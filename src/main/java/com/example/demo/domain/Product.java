@@ -8,6 +8,7 @@ import lombok.NoArgsConstructor;
 import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.PositiveOrZero;
+import java.io.Serializable;
 
 /**
  * @Author Eric
@@ -20,7 +21,7 @@ import javax.validation.constraints.PositiveOrZero;
 @AllArgsConstructor
 @Getter
 @Table(name = "product")
-public class Product {
+public class Product implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
@@ -28,7 +29,7 @@ public class Product {
 
     @NotBlank
     @Column(name = "product_name")
-    private String product_name;
+    private String productName;
 
     @NotBlank
     @Column(name = "description")
@@ -39,6 +40,13 @@ public class Product {
 
     @PositiveOrZero
     private int stock;
+
+    public void updateProduct(String productName, String description, int price, int stock) {
+        this.productName = productName;
+        this.description = description;
+        this.price = price;
+        this.stock = stock;
+    }
 
 
 }
