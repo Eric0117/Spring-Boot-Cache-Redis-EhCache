@@ -1,5 +1,5 @@
 # Spring-Boot-Cache-Redis-EhCache
-Spring에서 제공하는 캐시 라이브러리 Redis Cache 와 EhCache Cache를 이용한 실행환경별 적용
+Spring에서 제공하는 캐시 라이브러리 Redis Cache 와 EhCache Cache를 이용한 실행환경별 적용합니다.
 
 
 운영환경(local, production)별 CacheManager 구현체를 구성합니다
