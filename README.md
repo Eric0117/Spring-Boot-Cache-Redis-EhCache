@@ -22,6 +22,6 @@ $ monitor
 Medis와 같은 Redis Tool로 Data의 get/set 확인
 ```
 
-@ConditionalOnProperty Annotation을 사용한 운영환경(`spring.profiles.active`)별 CacheManager 구현체 생성
+@ConditionalOnProperty Annotation을 사용한 운영환경(`spring.profiles.active`)별 CacheManager 구현체 생성하였습니다.
 
-EhCache 설정을 ehcache.xml 이 아닌 POJO Configuration으로 설정
+EhCache 설정을 ehcache.xml 이 아닌 POJO Configuration으로 설정하였습니다.
